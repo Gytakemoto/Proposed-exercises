@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <math.h>
+
+
+struct abscissas{
+	float x1, x2;
+};
+
+struct ordenadas{
+	float y1, y2;
+};
+
+struct distancia{
+	float distancia1;
+};
+
+int main(){
+
+	struct abscissas x;           // int x
+	struct ordenadas y;
+	struct distancia distancia2;
+
+	scanf("%f %f", &x.x1, &x.x2);
+	scanf("%f %f", &y.y1, &y.y2);
+
+	distancia2.distancia1 = sqrt(pow((x.x2-x.x1),2) + pow((y.y2-y.y1),2));
+
+	printf("%.2f\n", distancia2.distancia1);
+
+	return 0;
+}
